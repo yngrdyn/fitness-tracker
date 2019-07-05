@@ -1,10 +1,24 @@
 <section>
-    <form>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
         <mat-form-field>
-            <input type="email" matInput placeholder="Your email">
+            <input type="email" matInput
+                placeholder="Your email"
+                ngModel
+                name="email"
+                required
+                #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
         </mat-form-field>
-        <mat-form-field>
-            <input type="password" matInput placeholder="Your password">
+        <mat-form-field hintLabel="Should be at least 6 characters long.">
+            <input type="password" matInput
+                placeholder="Your password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+                #pwInput="ngModel">
+            <mat-hint align="end" *ngIf="pwInput.value?.length > 0">{{ pwInput.value?.length}}</mat-hint>
+            <mat-error>Field must not be empty.</mat-error>
         </mat-form-field>
         <button type="submit" mat-raised-button color="primary">Submit</button>
     </form>
