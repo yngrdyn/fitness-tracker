@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatNativeDateModule, MatSidenavModule, MatToolbar, MatToolbarModule, MatListModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatNativeDateModule, MatSidenavModule, MatToolbar, MatToolbarModule, MatListModule, MatTabsModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatTabsModule,
+    MatCardModule,
   ],
   exports: [
     MatButtonModule,
@@ -30,6 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatTabsModule,
+    MatCardModule,
   ]
 })
 export class MaterialModule { }
