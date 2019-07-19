@@ -1,28 +1,34 @@
-<mat-card>
-    <mat-card-title>
-        Time to start a workout!
-    </mat-card-title>
-    <mat-card-content>
-        <mat-button-toggle-group class="fitness-tracker-exercise-group" ngModel #exercise="ngModel">
-            <mat-button-toggle class="fitness-tracker-exercise" value="crunches" [disableRipple]="true">
-                <mat-icon>fitness_center</mat-icon>
-                <span>Crunches</span>
-            </mat-button-toggle>
-            <mat-button-toggle class="fitness-tracker-exercise" value="touch-toes" [disableRipple]="true">
-                <mat-icon>fitness_center</mat-icon>
-                <span>Touch toes</span>
-            </mat-button-toggle>
-            <mat-button-toggle class="fitness-tracker-exercise" value="side-lunges" [disableRipple]="true">
-                <mat-icon>fitness_center</mat-icon>
-                <span>Side lunges</span>
-            </mat-button-toggle>
-            <mat-button-toggle class="fitness-tracker-exercise" value="burpees" [disableRipple]="true">
-                <mat-icon>fitness_center</mat-icon>
-                <span>Burpees</span>
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-    </mat-card-content>
-    <mat-card-actions>
-        <button type="submit" mat-button color="primary" [disabled]="exercise.value === ''">Start</button>
-    </mat-card-actions>
-</mat-card>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <mat-card>
+        <mat-card-title>
+            Time to start a workout!
+        </mat-card-title>
+        <mat-card-content>
+            <mat-button-toggle-group
+                class="fitness-tracker-exercise-group"
+                ngModel
+                #exercise="ngModel"
+                name="exercise">
+                <mat-button-toggle class="fitness-tracker-exercise" value="crunches" [disableRipple]="true">
+                    <mat-icon>fitness_center</mat-icon>
+                    <span>Crunches</span>
+                </mat-button-toggle>
+                <mat-button-toggle class="fitness-tracker-exercise" value="touch-toes" [disableRipple]="true">
+                    <mat-icon>fitness_center</mat-icon>
+                    <span>Touch toes</span>
+                </mat-button-toggle>
+                <mat-button-toggle class="fitness-tracker-exercise" value="side-lunges" [disableRipple]="true">
+                    <mat-icon>fitness_center</mat-icon>
+                    <span>Side lunges</span>
+                </mat-button-toggle>
+                <mat-button-toggle class="fitness-tracker-exercise" value="burpees" [disableRipple]="true">
+                    <mat-icon>fitness_center</mat-icon>
+                    <span>Burpees</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-button color="primary" [disabled]="exercise.value === ''">Start</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
