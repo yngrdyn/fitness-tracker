@@ -26,10 +26,18 @@
             <input matInput
                 placeholder="Your birthdate"
                 [matDatepicker]="picker"
-                [max]="maxDate">
+                [max]="maxDate"
+                name="birthdate"
+                ngModel
+                #birthdateInput="ngModel"
+                required>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="birthdateInput.hasError('required')">Field must not be empty.</mat-error>
+            <mat-error *ngIf="!birthdateInput.hasError('required')">Date is invalid</mat-error>
         </mat-form-field>
-        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <mat-checkbox ngModel #agreeInput="ngModel" name="agree" required>Agree to Terms and Conditions.</mat-checkbox>
+
+        <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Submit</button>
     </form>
 </section>
