@@ -2,9 +2,9 @@
     <mat-sidenav #sidenav 
         role="navigation">
         <div class="menu">
-            <a routerLink="/signup">Signup</a>
-            <a routerLink="/login">Login</a>
-            <a routerLink="/training">Training</a>
+            <a routerLink="/signup" (click)="sidenav.close()">Signup</a>
+            <a routerLink="/login" (click)="sidenav.close()">Login</a>
+            <a routerLink="/training" (click)="sidenav.close()">Training</a>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
