@@ -87,6 +87,10 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/datepicker
+
+@angular/material/dialog
+
 @angular/material/form-field
 
 @angular/platform-browser
