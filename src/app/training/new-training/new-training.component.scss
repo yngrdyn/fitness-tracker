@@ -8,6 +8,8 @@
 .mat-card {
     display: flex;
     flex-direction: column;
+    max-width: 80vh;
+
     .mat-card-title {
         text-align: center;
     }
@@ -30,6 +32,7 @@
 .fitness-tracker-exercise-group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .fitness-tracker-exercise {
@@ -41,7 +44,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0;
 
     ::ng-deep .mat-button-toggle-label-content {
         display: flex;
