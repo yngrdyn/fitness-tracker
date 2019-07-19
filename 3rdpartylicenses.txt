@@ -95,6 +95,12 @@ THE SOFTWARE.
 
 @angular/material/form-field
 
+@angular/material/icon
+
+@angular/material/sidenav
+
+@angular/material/toolbar
+
 @angular/platform-browser
 MIT
 
