@@ -1,9 +1,9 @@
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-    <mat-card>
-        <mat-card-title>
-            Time to start a workout!
-        </mat-card-title>
-        <mat-card-content>
+    <!-- <mat-card>
+        <mat-card-title> -->
+            <h2>Time to start a workout!</h2>
+        <!-- </mat-card-title>
+        <mat-card-content> -->
             <mat-button-toggle-group
                 class="fitness-tracker-exercise-group"
                 ngModel
@@ -26,9 +26,9 @@
                     <span>Burpees</span>
                 </mat-button-toggle>
             </mat-button-toggle-group>
-        </mat-card-content>
-        <mat-card-actions>
+        <!-- </mat-card-content>
+        <mat-card-actions> -->
             <button type="submit" mat-button color="primary" [disabled]="exercise.value === ''">Start</button>
-        </mat-card-actions>
-    </mat-card>
+        <!-- </mat-card-actions>
+    </mat-card> -->
 </form>
