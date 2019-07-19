@@ -6,7 +6,8 @@
 }
 
 .mat-card {
-    width: 400px;
+    display: flex;
+    flex-direction: column;
     .mat-card-title {
         text-align: center;
     }
@@ -16,6 +17,9 @@
     .mat-card-actions {
         display: flex;
         justify-content: center;
+        .mat-button {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -37,6 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 0.5rem;
 
     ::ng-deep .mat-button-toggle-label-content {
         display: flex;

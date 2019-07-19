@@ -3,7 +3,7 @@
         Time to start a workout!
     </mat-card-title>
     <mat-card-content>
-        <mat-button-toggle-group class="fitness-tracker-exercise-group">
+        <mat-button-toggle-group class="fitness-tracker-exercise-group" ngModel #exercise="ngModel">
             <mat-button-toggle class="fitness-tracker-exercise" value="crunches" [disableRipple]="true">
                 <mat-icon>fitness_center</mat-icon>
                 <span>Crunches</span>
@@ -23,6 +23,6 @@
         </mat-button-toggle-group>
     </mat-card-content>
     <mat-card-actions>
-        <button type="submit" mat-button>Start</button>
+        <button type="submit" mat-button color="primary" [disabled]="exercise.value === ''">Start</button>
     </mat-card-actions>
 </mat-card>
